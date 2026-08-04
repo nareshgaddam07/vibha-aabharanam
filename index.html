@@ -1,1 +1,710 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Vibha Aabharanam</title><link rel='stylesheet' href='assets/css/style.css'></head><body><header><h1>Vibha Aabharanam</h1></header><section class='hero'><h2>Tradition Meets Elegance</h2><p>Premium Imitation & Customized Jewellery</p><a href='shop.html'>Shop</a></section></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibha Aabharanam | Luxury Handmade & Customized Jewellery</title>
+    <meta name="description" content="Exquisite handmade and customized jewellery. Temple jewellery, CZ collections, long harams, and bridal wear with worldwide shipping.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA7C11;
+            --dark-brown: #2A1810;
+            --cream: #FFFDF9;
+            --white: #FFFFFF;
+            --gray-light: #F8F9FA;
+            --gray-text: #6C757D;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-brown);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        .top-bar {
+            background-color: var(--dark-brown);
+            color: var(--gold-light);
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        header {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--gold);
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .lang-switch-btn {
+            background: var(--gold);
+            color: var(--white);
+            border: none;
+            padding: 5px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(42, 24, 16, 0.6), rgba(42, 24, 16, 0.6)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--gold-light);
+            letter-spacing: 3px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold-light);
+            color: var(--gold-light);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold-light);
+            color: var(--dark-brown);
+        }
+
+        /* --- SHOP / PRODUCTS SECTION --- */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark-brown);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        /* Filter Controls */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 18px;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--dark-brown);
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 400px;
+            margin: 0 auto 30px auto;
+            display: flex;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-container button {
+            background: var(--gold);
+            color: var(--white);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 260px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            color: var(--dark-brown);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .price-request {
+            color: var(--gold-dark);
+            font-style: italic;
+        }
+
+        .wa-btn {
+            margin-top: auto;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .wa-btn:hover {
+            background: #128C7E;
+        }
+
+        /* --- CUSTOM ORDER BANNER --- */
+        .custom-banner {
+            background: var(--dark-brown);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .custom-banner h2 {
+            color: var(--gold-light);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- MODAL --- */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--dark-brown);
+            color: var(--cream);
+            padding: 50px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: var(--gray-text);
+        }
+
+        /* --- FLOATING WHATSAPP BUTTON --- */
+        .float-wa {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2rem; }
+            .btn-outline { margin-left: 0; margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar" id="topBar">
+        🌍 Worldwide International Shipping Available | 💬 WhatsApp to Order
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                Vibha
+                <span>AABHARANAM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-en="Home" data-te="హోమ్">Home</a></li>
+                <li><a href="#shop" data-en="Shop" data-te="షాప్">Shop</a></li>
+                <li><a href="#custom" data-en="Custom Order" data-te="కస్టమ్ ఆర్డర్">Custom Order</a></li>
+                <li><a href="#contact" data-en="Contact" data-te="సంప్రదించండి">Contact</a></li>
+            </ul>
+            <button class="lang-switch-btn" onclick="toggleLanguage()" id="langBtn">తెలుగు</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 id="heroTitle">Handcrafted Elegance</h1>
+            <p id="heroSub">Discover premium Temple, CZ, and Customized Jewellery tailored for every occasion.</p>
+            <a href="#shop" class="btn" id="heroBtn1">Explore Collection</a>
+            <button onclick="openCustomModal()" class="btn btn-outline" id="heroBtn2">Request Custom Design</button>
+        </div>
+    </section>
+
+    <!-- SHOP SECTION -->
+    <section class="section" id="shop">
+        <div class="section-title">
+            <h2 id="shopHeading">Our Exclusive Collection</h2>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search necklaces, harams, pearls..." onkeyup="filterProducts()">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterCategory('all', this)">All</button>
+            <button class="filter-btn" onclick="filterCategory('Temple', this)">Temple</button>
+            <button class="filter-btn" onclick="filterCategory('CZ', this)">CZ Collection</button>
+            <button class="filter-btn" onclick="filterCategory('Pearl', this)">Pearls</button>
+            <button class="filter-btn" onclick="filterCategory('Haram', this)">Long Haram</button>
+            <button class="filter-btn" onclick="filterCategory('Custom', this)">Customized</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- JS will populate this -->
+        </div>
+    </section>
+
+    <!-- CUSTOM ORDER BANNER -->
+    <section class="custom-banner" id="custom">
+        <h2>Want Something Unique?</h2>
+        <p>Send us your design ideas or reference photos. We craft custom jewellery to match your budget and occasion.</p>
+        <br>
+        <button class="btn" onclick="openCustomModal()">Submit Custom Enquiry</button>
+    </section>
+
+    <!-- CUSTOM ORDER MODAL -->
+    <div class="modal" id="customModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCustomModal()">&times;</span>
+            <h3 style="margin-bottom: 15px; color: var(--dark-brown);">Custom Jewellery Request</h3>
+            <form id="customForm" onsubmit="sendCustomOrder(event)">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="custName" required>
+                </div>
+                <div class="form-group">
+                    <label>Jewellery Type</label>
+                    <select id="custType">
+                        <option>Necklace / Haram</option>
+                        <option>Earrings</option>
+                        <option>Black Beads / Mangalsutra</option>
+                        <option>Bangles / Bracelets</option>
+                        <option>Bridal Set</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description & Requirements</label>
+                    <textarea id="custDesc" rows="3" placeholder="Describe design, color, budget..." required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Vibha Aabharanam</h4>
+                <p style="font-size: 0.9rem; color: #ccc;">Bringing you authentic and luxury jewellery craftsmanship. Handcrafted with love.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#custom">Custom Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p style="font-size: 0.9rem; color: #ccc;"><i class="fa fa-globe"></i> International Shipping Available</p>
+                <p style="font-size: 0.9rem; color: #ccc;"><i class="fab fa-whatsapp"></i> WhatsApp: Direct Ordering Enabled</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Vibha Aabharanam. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/?text=Hi%20Vibha%20Aabharanam,%20I%20want%20to%20inquire%20about%20your%20jewellery." class="float-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // CONFIGURATION: Set your official WhatsApp number here (with country code, no + sign)
+        const WHATSAPP_NUMBER = "910000000000"; 
+
+        // PRODUCT DATA (Add or edit items easily here)
+        const products = [
+            { id: 1, title: "Royal Temple Choker Set", category: "Temple", price: "₹1,899", img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" },
+            { id: 2, title: "Classic Pearl Long Haram", category: "Pearl", price: "₹2,499", img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" },
+            { id: 3, title: "CZ Emerald Bridal Necklace", category: "CZ", price: "₹3,200", img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" },
+            { id: 4, title: "Customized Black Beads Pendant", category: "Custom", price: "Price on Request", img: "https://images.unsplash.com/photo-1611591475193-4a00ecbe09b1?auto=format&fit=crop&w=600&q=80" },
+            { id: 5, title: "Matte Gold Long Haram Set", category: "Haram", price: "₹2,850", img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80" },
+            { id: 6, title: "Bridal Antique Earrings", category: "Temple", price: "₹899", img: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80" }
+        ];
+
+        let currentLang = 'en';
+
+        // Render Products
+        function renderProducts(items) {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+
+            if(items.length === 0) {
+                grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No products found matching your criteria.</p>';
+                return;
+            }
+
+            items.forEach(p => {
+                const isPriceOnReq = p.price.includes("Request");
+                const priceClass = isPriceOnReq ? "price-request" : "";
+                
+                const card = `
+                    <div class="product-card">
+                        <img src="${p.img}" alt="${p.title}" class="product-img">
+                        <div class="product-info">
+                            <span class="product-category">${p.category}</span>
+                            <h3 class="product-title">${p.title}</h3>
+                            <div class="product-price ${priceClass}">${p.price}</div>
+                            <a href="https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Vibha%20Aabharanam,%20I%20want%20to%20buy/inquire%20about:%20${encodeURIComponent(p.title)}" target="_blank" class="wa-btn">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // Filter Category
+        function filterCategory(cat, btnElement) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            if(cat === 'all') {
+                renderProducts(products);
+            } else {
+                const filtered = products.filter(p => p.category === cat);
+                renderProducts(filtered);
+            }
+        }
+
+        // Search Filter
+        function filterProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = products.filter(p => 
+                p.title.toLowerCase().includes(query) || 
+                p.category.toLowerCase().includes(query)
+            );
+            renderProducts(filtered);
+        }
+
+        // Modal Controls
+        function openCustomModal() {
+            document.getElementById('customModal').style.display = 'flex';
+        }
+
+        function closeCustomModal() {
+            document.getElementById('customModal').style.display = 'none';
+        }
+
+        function sendCustomOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const type = document.getElementById('custType').value;
+            const desc = document.getElementById('custDesc').value;
+
+            const msg = `Hi Vibha Aabharanam, I have a Custom Jewellery Request!\n\nName: ${name}\nType: ${type}\nDetails: ${desc}`;
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+            closeCustomModal();
+        }
+
+        // Language Switcher Toggle
+        function toggleLanguage() {
+            const btn = document.getElementById('langBtn');
+            if(currentLang === 'en') {
+                currentLang = 'te';
+                btn.innerText = 'English';
+                document.getElementById('topBar').innerText = '🌍 ప్రపంచవ్యాప్తంగా డెలివరీ కలదు | 💬 ఆర్డర్ చేయడానికి వాట్సాప్ చేయండి';
+                document.getElementById('heroTitle').innerText = 'హస్తకళల సౌందర్యం';
+                document.getElementById('heroSub').innerText = 'ప్రతి సందర్భానికి తగిన ప్రీమియం టెంపుల్, సిజెడ్ మరియు కస్టమైజ్డ్ ఆభరణాలు.';
+                document.getElementById('shopHeading').innerText = 'మా ప్రత్యేక కలెక్షన్';
+            } else {
+                currentLang = 'en';
+                btn.innerText = 'తెలుగు';
+                document.getElementById('topBar').innerText = '🌍 Worldwide International Shipping Available | 💬 WhatsApp to Order';
+                document.getElementById('heroTitle').innerText = 'Handcrafted Elegance';
+                document.getElementById('heroSub').innerText = 'Discover premium Temple, CZ, and Customized Jewellery tailored for every occasion.';
+                document.getElementById('shopHeading').innerText = 'Our Exclusive Collection';
+            }
+        }
+
+        // Initial Load
+        renderProducts(products);
+    </script>
+</body>
+</html>
