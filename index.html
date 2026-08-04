@@ -43,7 +43,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .brand-font {
+        h1, h2, h3, h4 {
             font-family: 'Cinzel', serif;
         }
 
@@ -76,23 +76,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 10px 20px;
         }
 
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--dark-brown);
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        /* LOGO STYLING */
+        .logo-link {
+            display: flex;
+            align-items: center;
         }
 
-        .logo span {
-            color: var(--gold);
-            display: block;
-            font-size: 0.75rem;
-            letter-spacing: 4px;
-            text-align: center;
+        .site-logo {
+            height: 60px; /* Adjust logo height */
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -459,6 +455,7 @@
             .nav-links { display: none; }
             .hero-content h1 { font-size: 2rem; }
             .btn-outline { margin-left: 0; margin-top: 10px; }
+            .site-logo { height: 45px; }
         }
     </style>
 </head>
@@ -469,13 +466,13 @@
         🌍 Worldwide International Shipping Available | 💬 WhatsApp to Order
     </div>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR WITH LOGO -->
     <header>
         <div class="nav-container">
-            <div class="logo">
-                Vibha
-                <span>AABHARANAM</span>
-            </div>
+            <a href="index.html" class="logo-link">
+                <!-- Ensure your image file in assets/images/ is saved as logo.png -->
+                <img src="assets/images/logo.png" alt="Vibha Aabharanam Logo" class="site-logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="#home" data-en="Home" data-te="హోమ్">Home</a></li>
                 <li><a href="#shop" data-en="Shop" data-te="షాప్">Shop</a></li>
@@ -520,7 +517,7 @@
 
         <!-- Products Grid -->
         <div class="products-grid" id="productsGrid">
-            <!-- JS will populate this -->
+            <!-- JS populates cards here -->
         </div>
     </section>
 
@@ -594,10 +591,10 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // CONFIGURATION: Set your official WhatsApp number here (with country code, no + sign)
+        // CONFIGURATION: Replace with your full WhatsApp number (with country code, no '+' sign)
         const WHATSAPP_NUMBER = "910000000000"; 
 
-        // PRODUCT DATA (Add or edit items easily here)
+        // PRODUCT DATA
         const products = [
             { id: 1, title: "Royal Temple Choker Set", category: "Temple", price: "₹1,899", img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" },
             { id: 2, title: "Classic Pearl Long Haram", category: "Pearl", price: "₹2,499", img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" },
